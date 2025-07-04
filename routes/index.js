@@ -11,7 +11,7 @@ router.get('/api', async (req, res) => {
     const response = await axios.get('https://randomuser.me/api/'); 
     res.json(response.data);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch data from external API' });
+    res.status(404).json({ error: 'Failed to fetch data from external API' });
   }
 });
 
